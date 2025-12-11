@@ -25,6 +25,33 @@ body {
     flex-grow: 1; 
 }
 
+/* --------------------------------- HEADER (Cabecera) --------------------------------- */
+/* (Los estilos específicos del header se pegarán aquí) */
+.main-header {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-weight: 300;
+}
+
+.main-header .subtitle {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.8; 
+}
+/* --------------------------------- FIN HEADER --------------------------------- */
+
+
+/* --------------------------------- CONTENIDO PRINCIPAL --------------------------------- */
+/* (Los estilos para el formulario y resultados se pegarán aquí) */
 #search-form {
     display: flex;
     gap: 15px;
@@ -108,4 +135,45 @@ button[type="submit"]:active {
     font-weight: 500;
     text-align: center;
     padding: 20px 0;
+}
+/* --------------------------------- FIN CONTENIDO PRINCIPAL --------------------------------- */
+
+
+/* --------------------------------- FOOTER (Pie de Página) --------------------------------- */
+/* (Los estilos para el footer se pegarán aquí) */
+.main-footer {
+    margin-top: auto; /* Empuja el footer hacia el fondo */
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--secondary-color);
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.main-footer .github-link {
+    font-style: italic;
+    font-weight: 300;
+}
+/* --------------------------------- FIN FOOTER --------------------------------- */
+
+
+/* --- ESTILOS DE LA ANIMACIÓN JS --- */
+/* (Estilos de la rama 'main' / 'header') */
+.main-header .subtitle {
+    /* Estado inicial: opacidad 0 */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out, color 0.5s; 
+}
+
+.main-header .subtitle.is-visible {
+    /* Estado final cuando JS añade la clase 'is-visible' */
+    opacity: 1;
+    transform: translateY(0);
 }

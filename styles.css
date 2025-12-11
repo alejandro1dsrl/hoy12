@@ -1,3 +1,32 @@
+/* Estilos Generales y Tipografía */
+:root {
+    --primary-color: #4CAF50; 
+    --secondary-color: #333;
+    --background-color: #f7f9fc;
+    --card-background: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.container {
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    flex-grow: 1; 
+}
+
+/* --------------------------------- HEADER (Cabecera) --------------------------------- */
+/* (Los estilos específicos del header se pegarán aquí) */
 .main-header {
     width: 100%;
     background-color: var(--primary-color);
@@ -18,7 +47,124 @@
     font-weight: 300;
     opacity: 0.8; 
 }
-/**/
+/* --------------------------------- FIN HEADER --------------------------------- */
+
+
+/* --------------------------------- CONTENIDO PRINCIPAL --------------------------------- */
+/* (Los estilos para el formulario y resultados se pegarán aquí) */
+#search-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: stretch;
+}
+
+#word-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#word-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #43a047; 
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* --- RESULTADOS Y ANIMACIÓN (Estilos de tu rama 'contenido') --- */
+.result-container {
+    min-height: 120px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    
+    /* ANIMACIÓN DE APARICIÓN */
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(10px);
+}
+
+.placeholder-text {
+    color: #999;
+    text-align: center;
+    font-style: italic;
+    margin: 35px 0;
+}
+
+.word-title {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.definition {
+    line-height: 1.7;
+    font-size: 1.1em;
+    color: var(--secondary-color);
+}
+
+.error-message {
+    color: #e53935; 
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0;
+}
+/* --------------------------------- FIN CONTENIDO PRINCIPAL --------------------------------- */
+
+
+/* --------------------------------- FOOTER (Pie de Página) --------------------------------- */
+/* (Los estilos para el footer se pegarán aquí) */
+.main-footer {
+    margin-top: auto; /* Empuja el footer hacia el fondo */
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--secondary-color);
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+.main-footer .github-link {
+    font-style: italic;
+    font-weight: 300;
+}
+/* --------------------------------- FIN FOOTER --------------------------------- */
+
+
+/* --- ESTILOS DE LA ANIMACIÓN JS --- */
+/* (Estilos de la rama 'main' / 'header') */
 .main-header .subtitle {
     /* Estado inicial: opacidad 0 */
     opacity: 0;

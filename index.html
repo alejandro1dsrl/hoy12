@@ -4,24 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     <div class="container">
-        <form id="search-form" class="search-section">
-            <input 
-            type="text" 
-            id="word-input" 
-            placeholder="Escribe un concepto clave (ej: git, push, rama)..." 
-            required
-            >
-            <button type="submit">Buscar Definición</button>
-        </form>
-
-        <div id="result-container" class="result-container">
-            <p class="placeholder-text">🔍 Utiliza la barra de búsqueda para encontrar definiciones en la base de datos.</p>
-        </div>
-    </div>
-    <script src="/script.js"></script>
+    <header class="main-header" id="main-header">
+        <h1>Buscador de Términos 📖</h1>
+        <p class="subtitle" id="header-subtitle">Tu herramienta minimalista para entender conceptos clave.</p>
+    </header>
+    <script src="script.js"></script>
 </body>
 </html>

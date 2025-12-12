@@ -1,3 +1,5 @@
+// ------------------------------ INICIO: DATOS DEL DICCIONARIO (BASE) ----------------------------
+// Se inicializa el objeto vacío. Los términos y la lógica de búsqueda se añadirán en la siguiente rama.
 const dictionaryData = {
     "git": "Sistema de control de versiones distribuido, esencial para el seguimiento de cambios en el código de un proyecto.",
     "push": "Operación de Git que sube los cambios (commits) desde el repositorio local al repositorio remoto (ej. GitHub).",
@@ -95,3 +97,16 @@ function handleSearch(event) {
 if (form) {
     form.addEventListener('submit', handleSearch);
 }
+
+// ------------------------------ FIN: LÓGICA DE LA APLICACIÓN ------------------------------------------------
+
+// ------------------------------ INICIO: LÓGICA DEL FOOTER ----------------------------
+// Muestra el año actual en el footer
+document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+    }
+});
+// ------------------------------ FIN: LÓGICA DEL FOOTER ------------------------------------------------

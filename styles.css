@@ -177,3 +177,8 @@ button[type="submit"]:active {
     opacity: 1;
     transform: translateY(0);
 }
+.cclo{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out, color 0.5s;
+}

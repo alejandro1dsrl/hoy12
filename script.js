@@ -93,20 +93,29 @@ function handleSearch(event) {
     input.value = ''; 
 }
 
-// Asigna el evento al formulario
+// Asigna el evento al formularioo
 if (form) {
     form.addEventListener('submit', handleSearch);
 }
+// ultimo <p> 
+// Espera a que el DOM esté completamente cargado (buena práctica)
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Selecciona el párrafo
+    const parrafoAdios = document.querySelector('.adios');
 
-// ------------------------------ FIN: LÓGICA DE LA APLICACIÓN ------------------------------------------------
+    // Simula que algo pasa (por ejemplo, después de enviar un formulario)
+    // y muestra el mensaje después de 1 segundo
+    setTimeout(() => {
+        if (parrafoAdios) {
+            // Muestra el párrafo animado
+            parrafoAdios.classList.add('mostrar');
 
-// ------------------------------ INICIO: LÓGICA DEL FOOTER ----------------------------
-// Muestra el año actual en el footer
-document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('current-year');
-    if (yearSpan) {
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-    }
+            // Oculta el párrafo automáticamente después de 3 segundos más
+            setTimeout(() => {
+                parrafoAdios.classList.remove('mostrar');
+                // Opcional: Ocultarlo completamente si no se va a usar más
+                // parrafoAdios.style.display = 'none'; 
+            }, 3000); 
+        }
+    }, 1000); // Muestra después de 1 segundo
 });
-// ------------------------------ FIN: LÓGICA DEL FOOTER ------------------------------------------------

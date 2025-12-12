@@ -160,7 +160,7 @@ button[type="submit"]:active {
     font-style: italic;
     font-weight: 300;
 }
-/* --------------------------------- FIN FOOTER --------------------------------- */
+/* -------------------------------- FIN FOOTER -------------------------------- */
 
 
 /* --- ESTILOS DE LA ANIMACIÓN JS --- */
@@ -176,4 +176,33 @@ button[type="submit"]:active {
     /* Estado final cuando JS añade la clase 'is-visible' */
     opacity: 1;
     transform: translateY(0);
+}
+.cclo{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-out, transform 1s ease-out, color 0.5s;
+}
+/*ultimo <p>*/
+/* Estilo inicial del párrafo */
+.adios {
+    font-size: 24px;
+    color: #4CAF50; /* Un bonito verde */
+    text-align: center;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(20px);
+}
+
+/* Clase añadida con JS para mostrar y animar */
+.adios.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+    /* Opcional: Animación de pulso una vez visible */
+    animation: pulse 1s infinite alternate;
+}
+
+/* Keyframes para la animación de pulso (si se desea) */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
 }

@@ -70,7 +70,7 @@ function handleSearch(event) {
     input.value = ''; 
 }
 
-// Asigna el evento al formulario
+// Asigna el evento al formularioo
 if (form) {
     form.addEventListener('submit', handleSearch);
 }
